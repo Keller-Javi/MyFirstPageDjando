@@ -15,11 +15,3 @@ urlpatterns = [
     path('delete_tasks/<int:id>', views.delete_task, name="delete_task"),
     path('done_tasks/<int:id>', views.done_task, name="done_task"),
 ]
-
-# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-# ./env/Scripts/activate
-
-# super user:
-# username: Javi5000
-# email: kellj5000@gmail.com
-# password: qwerty5000
