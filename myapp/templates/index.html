@@ -1,0 +1,18 @@
+{% extends "./layouts/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block header %}
+    <h1> Bienvenido {{ username }} </h1>
+    <h2> Esta es mi primer web con backend </h2>
+{% endblock %}
+
+{% block body %}
+    <img src="{% static 'meme.jpg' %}" alt="" width="300">
+    <h4> Texto random: </h4>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque temporibus maiores tempora debitis iste nam? Numquam, impedit assumenda ea molestias, a libero ad illum cum minus, aliquam pariatur. Voluptates assumenda quasi perspiciatis reiciendis provident est voluptatum aliquam ducimus omnis inventore molestias libero eveniet illum asperiores consectetur, quas magni beatae eius voluptatem itaque maxime. Laboriosam esse praesentium distinctio maxime commodi adipisci maiores a minus consequatur. Doloremque, obcaecati maxime, rerum aliquid, assumenda ea dignissimos impedit at nam in eligendi iure voluptate ut provident amet consequatur architecto repellendus? Nam, voluptates maxime? Saepe inventore, accusamus incidunt hic animi sunt laudantium et quidem quis perspiciatis! </p>
+{% endblock %}

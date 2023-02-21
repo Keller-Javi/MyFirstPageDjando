@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Sesion </title>
+    </head>
+    <header>
+        <h1> Iniciar seccion o crear cuenta: </h1>
+    </header>
+    <section>
+        <form name="CrearCuenta" method="post">
+            {% csrf_token %}
+            <p><input type="text" name="username"></p>
+            <p><input type="password" name="password"></p>
+            <p><label><input type="radio" name="crear_cuenta" value="0" checked> Iniciar sesion</label></p>
+            <p><label><input type="radio" name="crear_cuenta" value="1"> Crear cuenta </label></p>
+            <p><input type="submit" value="Enviar"></p>
+        </form>
+    </section>
+</html>

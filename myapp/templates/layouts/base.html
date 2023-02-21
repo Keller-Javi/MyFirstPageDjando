@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    </head>
+    <main>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'home' %}"> Home </a></li>
+                <li><a href="{% url 'projects' %}"> Projects </a></li>
+                <li><a href="{% url 'tasks' %}"> Tasks </a></li>
+                <li><a href="{% url 'about' %}"> About </a></li>
+            </ul>
+        </nav>
+        <div class="body">
+            <header>
+                {% block header %} {% endblock %}
+            </header>
+            <body>
+                {% block body %}
+                {% endblock %}
+                <br>
+                <br>
+            </body>
+            <footer>
+                <address> Toronto, Canada</address>
+                <small> © Derechos reservados 2023 </small>
+            </footer>
+        </div>
+    </main>
+
+</html>

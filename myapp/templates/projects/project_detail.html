@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Project detail
+{% endblock %}
+
+{% block header %}
+
+<h1> Project detail </h1>
+
+{% endblock %}
+
+{% block body %}
+
+<h2> {{project_name}} </h2> <!-- need a project name -->
+<h3> Tasks of this project: </h3>
+
+{% for task in tasks %} <!-- need a list of tasks -->
+    <h4 class="card"> - {{ task.title }} </h4>
+{% endfor %}
+
+{% endblock %}

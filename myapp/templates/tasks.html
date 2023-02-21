@@ -1,0 +1,25 @@
+{% extends "./layouts/base.html" %}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block body %}
+    <h1> Tasks </h1>
+
+    <a href="{% url 'create_tasks' %}" class="buttons">
+        Create new task
+    </a>
+
+    <h2> List of tasks: </h2>
+
+    {% for task in tasks %}
+        <h3 class="card"> - {{ task }} {% if task.done %} ✅ {% else %} 🕐 {% endif %} </h3>        
+
+        <a href="{% url 'delete_task' task.id %}" class="buttons"> Delete </a>
+
+        {% if not task.done %}
+            <a href="{% url 'done_task' task.id %} " class="buttons"> Done </a>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
